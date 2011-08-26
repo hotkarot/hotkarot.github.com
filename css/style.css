@@ -309,6 +309,7 @@ p {
 }
 ul {
   margin-top: .5em;
+  list-style-image: url("../img/mrkvicka.gif");
 }
 a {
   text-decoration: underline;
