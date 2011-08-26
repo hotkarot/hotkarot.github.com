@@ -309,7 +309,6 @@ p {
 }
 ul {
   margin-top: .5em;
-  list-style-image: url("../img/mrkvicka.gif");
 }
 a {
   text-decoration: underline;
@@ -338,6 +337,9 @@ hr {
 #content blockquote {
  font: italic normal 1.5em/1.8em "Lucida Bright", serif;
  padding: 1em;
+}
+ul.list {
+  list-style-image: url("../img/mrkvicka.gif");
 }
 
 
