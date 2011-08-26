@@ -341,6 +341,13 @@ hr {
 ul.list {
   list-style-image: url("../img/mrkvicka.gif");
 }
+#githubInfo {
+  display: none;
+}
+#githubInfo a {
+  text-decoration: none;
+  font-weight: bold;
+}
 
 
 /* 

@@ -14,11 +14,6 @@
       <fb:like-box href="http://www.facebook.com/hotkarot" width="292" show_faces="true" border_color="" stream="true" header="true"></fb:like-box>
     </div>
     <div id="content">
-      <!--
-      <a href="http://www.facebook.com/hotkarot">
-        <img src="img/logo.jpg" alt="HotKarot logo">
-      </a>
-      -->
       <h1>OpenSauce by HotKarot</h1>
       <blockquote>Social cooking with GitHub</blockquote>
       <p>The idea of the open sauce project is to get people to publish recipes on <a href="https://github.com/">GitHub</a> so that they can improve them in collaboration.</p>
@@ -28,6 +23,10 @@
       
       <p>The GitHub repository for this project can be found at: <a href="https://github.com/hotkarot/hotkarot.github.com">https://github.com/hotkarot/hotkarot.github.com</a></p>
       
+      <hr>
+      <p id="githubInfo"></p>
+      <hr>
+      
       <h2 id="opensauces">Open sauces</h2>
       <ul>
         <li><a href="sauces/herr_koriander.html">Herr Koriander</a></li>
@@ -36,5 +35,47 @@
       </ul>
     </div>
   </div>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript">
+  (function($) {
+    $(document).ready(function() {
+      var username = "hotkarot",
+        reponame = "hotkarot.github.com",
+        baseUrl = "https://github.com/",
+        repoUrl = baseUrl
+          + username
+          + "/"
+          + reponame,
+        apiUrl = baseUrl 
+          + "api/v2/json/repos/show/"
+          + username
+          + "/"
+          + reponame
+          + "?callback=?";
+      $.getJSON(apiUrl, function(data) {
+         data = data.repository;
+         if(data) {
+           var $githubInfo = $("#githubInfo");
+           $githubInfo.append(
+             "<span>Watchers: <a href=\""
+             + repoUrl
+             + "/watchers\">"
+             + data.watchers
+             + "</a></span> | <span>Forks: <a href=\""
+             + repoUrl 
+             + "/network\">"
+             + data.forks
+             + "</a></span> | <span>Open issues: <a href=\""
+             + repoUrl
+             + "/issues\">"
+             + data.open_issues
+             + "</a></span>"
+           );
+           $githubInfo.show()
+         }
+      });
+    });
+  }(jQuery));
+  </script>
 </body>
 </html>
