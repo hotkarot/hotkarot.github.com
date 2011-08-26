@@ -301,6 +301,13 @@ h1, h2, h3 {
 h1 {
   font-size: 300%;
 }
+h1 a {
+  color: #111;
+  text-decoration: none;
+}
+h1 a:hover, h1 a:focus {
+  color: #de232a;
+}
 h2 {
   font-size: 200%;
 }
@@ -313,6 +320,16 @@ ul {
 a {
   text-decoration: underline;
   color: #de232a;
+  -moz-transition-property: color;
+  -webkit-transition-property: color;
+  -o-transition-property: color;
+  -webkit-transition: .5s ease-out;  
+  -moz-transition: .5s ease-out;  
+  -o-transition: .5s ease-out;
+  transition: .5s ease-out; 
+}
+a:hover, a:focus {
+  color: #000;
 }
 hr {
   height: 1px;
@@ -325,6 +342,9 @@ hr {
   margin: 0 auto;
   background: #fff;
   padding: 2em;
+  -moz-box-shadow: 0 0 1em #ccc;
+  -webkit-box-shadow: 0 0 1em #ccc;
+  box-shadow: 0 0 1em #ccc;
 }
 #likebox {
   float: right;
