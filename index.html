@@ -1,21 +1,34 @@
 <!DOCTYPE html> 
-<html lang="cs">
+<html lang="en">
 <head>  
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
   <title>HotKarot's open sauces</title>
 </head>
 <body>
-  <img src="img/logo.jpg" alt="HotKarot logo">
-  <h1>HotKarot's open sauces</h1>
-  <h2>Social cooking with version control</h2>
-  <p>The idea is to get people to publish recipes on GitHub so that they can improve them with collaboration.</p>
-  <h2>Open sauces</h2>
-  <ul>
-    <li><a href="sauces/herr_koriander.html">Herr Koriander</a></li>
-  </ul>
-  <div id="fb-root"></div>
-  <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-  <fb:like-box href="http://www.facebook.com/hotkarot" width="292" show_faces="true" border_color="" stream="true" header="true"></fb:like-box>
+  <div id="main">
+    <div id="likebox" class="clearfix">
+      <div id="fb-root"></div>
+      <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+      <fb:like-box href="http://www.facebook.com/hotkarot" width="292" show_faces="true" border_color="" stream="true" header="true"></fb:like-box>
+    </div>
+    <div id="content">
+      <!--
+      <a href="http://www.facebook.com/hotkarot">
+        <img src="img/logo.jpg" alt="HotKarot logo">
+      </a>
+      -->
+      <h1>OpenSauce by HotKarot</h1>
+      <blockquote>Social cooking with version control</blockquote>
+      <p>The idea is to get people to publish recipes on <a href="https://github.com/">GitHub</a> so that they can improve them in collaboration. </p>
+      
+      <p>The GitHub repository for this project can be found at: <a href="https://github.com/hotkarot/hotkarot.github.com">https://github.com/hotkarot/hotkarot.github.com</a></p>
+      
+      <h2 id="opensauces">Open sauces</h2>
+      <ul>
+        <li><a href="sauces/herr_koriander.html">Herr Koriander</a></li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>

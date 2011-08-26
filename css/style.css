@@ -282,7 +282,55 @@ button {
 
 /* Primary styles */
 
-
+html, body, #main {
+  height: 100%;
+}
+body > #main {
+  height: auto;
+  min-height: 100%;
+}
+body {
+  background: #f5f5f5;
+  color: #111;
+  line-height: 1.5em;
+}
+h1, h2, h3 {
+  padding: .2em 0 .3em 0;
+  margin: .5em 0 .1em 0;
+}
+h1 {
+  font-size: 300%;
+}
+h2 {
+  font-size: 200%;
+}
+p {
+  margin: .5em 0;
+}
+ul {
+  margin-top: .5em;
+}
+a {
+  text-decoration: underline;
+  color: #de232a;
+}
+#main {
+  width: 61.8%;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2em;
+}
+#likebox {
+  float: right;
+}
+#content img {
+  padding: 0 1.5em 1.5em 0;
+  float: left;
+}
+#content blockquote {
+ font: italic normal 1.5em/1.8em "Lucida Bright", serif;
+ padding: 1em;
+}
 
 
 /* 
