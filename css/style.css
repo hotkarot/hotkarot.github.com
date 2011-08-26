@@ -314,6 +314,12 @@ a {
   text-decoration: underline;
   color: #de232a;
 }
+hr {
+  height: 1px;
+  border: none;
+  background-color: #dedede;
+  color: #dedede;
+}
 #main {
   width: 61.8%;
   margin: 0 auto;
@@ -322,6 +328,7 @@ a {
 }
 #likebox {
   float: right;
+  margin: 0 1.5em;
 }
 #content img {
   padding: 0 1.5em 1.5em 0;
